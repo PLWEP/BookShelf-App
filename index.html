@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Rak Buku</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="center smallpadding">
+        <h1>Aplikasi Rak Buku</h1>
+    </header>
+    
+    <main>
+        <aside>
+            <article class="thickborder">
+                <div class="article-header smallpadding">
+                    <h2>Masukan buku dalam rak</h2>
+                </div>
+                <div id="validasi" class="validasi smallpadding center none">
+                    <p>Mohon masukan data dengan benar</p>
+                </div>
+                <div class="article-content smallpadding">
+                    <form>
+                        <label for='judul'>Judul</label>
+                        <input type='text' id='judul' name='judul' class="thinborder"> 
+                    </form>
+                    <form>
+                        <label for='penulis'>Penulis</label>
+                        <input type='text' id='penulis' name='penulis' class="thinborder"> 
+                    </form>
+                    <form>
+                        <label for='tahun'>Tahun</label>
+                        <input type='date' id='tahun' name='tahun' class="thinborder">
+                    </form>
+                    <form id="inputForm">
+                        <button type='submit'>Simpan</button>	
+                    </form>
+                </div>
+            </article>
+            <article class="thickborder">
+                <div class="article-header smallpadding">
+                    <h2>Cari buku dalam rak</h2>
+                </div>
+                <div class="article-content smallpadding">
+                    <form>
+                        <input type="text" name="cari" id="cari" class="thinborder">
+                    </form>
+                    <form id="searchForm">
+                        <button type="submit">Cari</button>
+                    </form>
+                </div>
+            </article>
+        </aside>
+        <div class="content">
+            <article class="thickborder">
+                <div class="article-header smallpadding">
+                    <h2>Rak buku yang sedang dibaca</h2>
+                </div>
+                <div class="article-content smallpadding" id="uncompleted">
+                    <!-- Tempat data -->
+                </div>
+            </article>
+            <article class="thickborder">
+                <div class="article-header smallpadding">
+                    <h2>Rak buku yang sudah dibaca</h2>
+                </div>
+                <div class="article-content smallpadding" id="completed">
+                    <!-- Tempat data -->
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="center smallpadding">
+        <p>Copyright PLWEP 2022</p>
+    </footer>
+    
+    <!-- Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>

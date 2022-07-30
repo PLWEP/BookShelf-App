@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Kdam+Thmor+Pro&family=Roboto+Mono&display=swap');
+
+/* Deklarasi variabel */
+:root {
+    /* Color */
+    --primary-color: #FFD24C;
+    --secondary-color: #FFE69A;
+    --dark: #2B2B2B;
+    --light: #FFFFFF;
+    --blue: #AEDBCE;
+
+    /* Font */
+    --title-font: 500 24px 'Kdam Thmor Pro', sans-serif;
+    --header-font: 200 16px/24px 'Roboto Mono', monospace;
+    --item-font: 14px/18px 'Roboto Mono', monospace;
+    --paragraph-font: 14px/16px 'Cairo', sans-serif;
+
+    /* Size */
+    --mini: 5px;
+    --small: 10px;
+    --medium: 15px;
+    --large: 20px;
+    --big: 25px;
+
+    /* Box Shadow */
+    --box: 2px 4px 11px 2px rgba(0,0,0,0.37);
+}
+
+/* Default */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: var(--paragraph-font); 
+}
+
+.center {
+    text-align: center;
+}
+
+.smallpadding {
+    padding: var(--small);
+}
+
+h1 {
+    font: var(--title-font);
+}
+
+h2 {
+    font: var(--header-font);
+}
+
+h3 {
+    font: var(--item-font);
+}
+
+.thinborder {
+    border: 1px solid lightgrey;
+}
+
+.thickborder {
+    border: 1px solid var(--dark);
+    border-radius: var(--mini);
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    margin-bottom: var(--small);
+}
+
+label {
+    font: var(--item-font);
+}
+
+input {
+    height: var(--big);
+    padding: var(--medium) var(--mini);
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Style */
+header {
+    background-color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--dark);
+    color: var(--light);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+main {
+    width: 1000px;
+    margin: var(--medium) auto var(--big) auto;
+    display: grid;
+    gap: var(--mini);
+    grid-template-columns: 1fr 2fr;
+}
+
+article {
+    box-shadow: var(--box);
+    margin: var(--small);
+    overflow: hidden;
+}
+
+.article-header {
+    background-color: var(--secondary-color);
+    margin-bottom: var(--small);
+}
+
+.content .article-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: var(--medium);
+    max-height: 400px;
+    overflow: auto;
+}
+
+.box {
+    overflow: auto;
+}
+
+.box-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: var(--mini);
+}
+
+.box-footer img {
+    margin-left: var(--mini);
+    width: var(--medium);
+    cursor: pointer;
+}
+
+.validasi {
+    background-color: var(--blue);
+}
+
+.none {
+    display: none;
+}
+
+@media screen and (max-width: 640px) {
+    footer {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        width: 90%;
+    }
+}
+
+
